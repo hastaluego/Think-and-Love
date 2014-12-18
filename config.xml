@@ -58,6 +58,7 @@
     <!-- PLUGINS -->
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="com.ionic.keyboard" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
 
 
     <!-- GAP PLATFORMS -->
