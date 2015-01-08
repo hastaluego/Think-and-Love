@@ -1,22 +1,25 @@
-.scroll{
+.scroll {
     position: relative;
     height: 100%;
 }
-iframe{
+
+iframe {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
+    display: block;
 }
-.loading{
+
+.loading {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
     background: url(../img/loading.gif) no-repeat center #01a3b7;
     z-index: 99;
 }
