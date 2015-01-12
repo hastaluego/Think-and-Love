@@ -16,6 +16,13 @@ $(document).ready(function(){
         e.preventDefault();
 
         $('.loading').show();
+
+        setTimeout(function(){
+            $nav.animate({top: '-35%'}, 200, function(){
+                $overlay.fadeOut(200);
+            });
+        }, 100);
+        
         $( "#conteudo" ).load( $(this).attr('rel') , function(){
             $('.loading').hide();
         });
