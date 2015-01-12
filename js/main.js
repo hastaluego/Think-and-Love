@@ -8,7 +8,7 @@ function _link(data){
 
 $(document).ready(function(){
 
-    $( "#conteudo" ).load( "http://thinkandlove.com.br/m_/" , function(){
+    $( "#conteudo" ).load( "http://thinkandlove.com.br/m/" , function(){
         $('.loading').hide();
     });
 
@@ -28,7 +28,9 @@ $(document).ready(function(){
         $( "#conteudo" ).load( $(this).attr('rel') , function(){
             $('.loading').hide();
 
-            if ($(_button).attr('rel') == 'http://thinkandlove.com.br/m_/index.php/causas') {
+            $('.box-iframe').css('height' , $(window).height() / zoom );
+
+            if ( $(_button).attr('rel').indexOf("causas") != -1 ) {
                 $.each( $('.causas article') , function(i, el){
                     var _this = this;
 
@@ -37,6 +39,14 @@ $(document).ready(function(){
                         'opacity':1.0
                        }, 600);
                     },200 + ( i * 200 ));
+                });
+            };
+
+            if ( $(_button).attr('rel').indexOf("ongs") != -1 || $(_button).attr('rel').indexOf("causas_categoria") != -1 ) {
+                $.each( $('.ong-list article img') , function(){
+                    var _this = this;
+
+                    $(_this).attr('src' , $(_this).attr('src').replace("/m/", '') );
                 });
             };
         });
