@@ -2,6 +2,12 @@ var zoom = window.innerWidth/640;
 document.getElementById('resize-content').style.opacity = 1;
 document.getElementById('resize-content').style.zoom = zoom;
 
+if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1)){
+    jQuery('select').selectric({
+        disableOnMobile: false
+    });
+}
+
 $(document).ready(function(){
 
     $( "#conteudo" ).load( "http://thinkandlove.com.br/m/" , function(){
@@ -105,11 +111,7 @@ $(document).ready(function(){
     });
 
     
-    if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1)){
-        jQuery('select').selectric({
-            disableOnMobile: false
-        });
-    }
+
 
     $(document).on('tap', '.btn-youtube', function(e){
         e.preventDefault();
