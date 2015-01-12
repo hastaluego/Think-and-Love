@@ -8,6 +8,12 @@ $(document).ready(function(){
         $('.loading').hide();
     });
 
+    $(document).on('tap', '.btn-externo', function(e){
+        e.preventDefault();
+        var _button = this;
+        window.open(decodeURIComponent( $(_button).attr('rel') ), '_system');
+    });
+
     $(document).on('tap', '.btn', function(e){
         e.preventDefault();
 
