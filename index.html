@@ -7,22 +7,16 @@
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/main.css?v2" rel="stylesheet">
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
-    <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-
-    <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
-
-    <!-- your app's js -->
     <script src="js/app.js"></script>
-
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css?v2">
 
     <script src="js/vendor/jquery-2.1.1.min.js"></script>
     <script src="js/vendor/zepto.min.js"></script>
@@ -32,6 +26,8 @@
         var wH = screen.availHeight;
         var $ = Zepto;
     </script>
+
+    <script src="js/vendor/selectric.js"></script>
 
 </head>
 
@@ -43,7 +39,7 @@
                 <!-- Main structure -->
                 <header class="header">
                     <h1 class="inner">
-                        <a href="/">
+                        <a class="btn" href="javascript:void(0);" rel="http://thinkandlove.com.br/m_/">
                             <img class="logo" src="img/logo.png" alt="ThinkandLove" />
                         </a>
                     </h1>
@@ -54,8 +50,8 @@
                 <div class="overlay">
                     <nav>
                         <ul>
-                            <li><a href="{index}causas">Causas</a></li>
-                            <li><a href="{index}ongs">Ongs</a></li>
+                            <li><a class="btn" href="javascript:void(0);" rel="http://thinkandlove.com.br/m_/index.php/causas">Causas</a></li>
+                            <li><a class="btn" href="javascript:void(0);" rel="http://thinkandlove.com.br/m_/index.php/ongs">Ongs</a></li>
                             <li><a href="javascript:_link('http://thinkandlove.com.br/m/doe_agora')">Doe agora</a></li>
                         </ul>
                         <a href="javascript:void(0)" class="btn-menu">
@@ -71,21 +67,4 @@
 </body>
 </html>
 
-<script>
-    var zoom = window.innerWidth/640;
-    document.getElementById('resize-content').style.opacity = 1;
-    document.getElementById('resize-content').style.zoom = zoom;
-</script>
-
-<script>
-function _link(data){
-   window.open(decodeURIComponent(data), '_system');
-}
-
-$(function(){
-    $( "#conteudo" ).load( "http://thinkandlove.com.br/m_/" , function(){
-        $('.loading').hide();
-    });
-});
-
-</script>
+<script src="js/main.js"></script>
