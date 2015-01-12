@@ -720,7 +720,7 @@ body .header .inner {
 html .header .inner .logo,
 body .header .inner .logo {
   display: inline-block;
-  height: 75%;
+  height: 95%;
   width: auto;
 }
 html .header .btn-voltar,
@@ -733,7 +733,7 @@ body .header .btn-voltar {
 html .header .btn-menu,
 body .header .btn-menu {
   position: absolute;
-  top: 45px;
+  top: 28px;
   right: 10px;
   width: 72px;
   height: 50px;
@@ -956,7 +956,7 @@ body {
   }
   html .header .inner,
   body .header .inner {
-    height: 50px;
+    height: 70px;
   }
   html .ongs .header-title-large,
   body .ongs .header-title-large {
@@ -997,7 +997,7 @@ body {
   }
   html .header .inner,
   body .header .inner {
-    height: 50px;
+    height: 70px;
   }
   html .ongs .header-title-large,
   body .ongs .header-title-large {
