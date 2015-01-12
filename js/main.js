@@ -12,7 +12,7 @@ $(document).ready(function(){
         $('.loading').hide();
     });
 
-    $(document).on('touchstart', '.btn', function(e){
+    $(document).on('tap', '.btn', function(e){
         e.preventDefault();
 
         $('.loading').show();
@@ -22,7 +22,7 @@ $(document).ready(function(){
                 $overlay.fadeOut(200);
             });
         }, 100);
-        
+
         $( "#conteudo" ).load( $(this).attr('rel') , function(){
             $('.loading').hide();
         });
@@ -36,7 +36,7 @@ $(document).ready(function(){
         $btnvoltar    = $('.btn-voltar'),
         $overlay      = $('.overlay'),
         $nav          = $overlay.find('nav'),
-        eventClick    = 'touchstart';
+        eventClick    = 'tap';
 
     $btnmenu.on(eventClick, function(e){
         setTimeout(function(){
@@ -77,7 +77,7 @@ $(document).ready(function(){
         });
     }
 
-    $(document).on('touchstart', '.btn-youtube', function(e){
+    $(document).on('tap', '.btn-youtube', function(e){
         e.preventDefault();
         $('.box-iframe').fadeIn();
         var _this = $(this);
@@ -88,7 +88,7 @@ $(document).ready(function(){
         return false; 
     });
 
-    $(document).on('touchstart', '.box-iframe .close, .box-iframe', function(e){
+    $(document).on('tap', '.box-iframe .close, .box-iframe', function(e){
         e.preventDefault();
         $('.box-iframe').fadeOut();
         var ifr = document.getElementById('loader');
