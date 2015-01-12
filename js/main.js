@@ -15,6 +15,8 @@ $(document).ready(function(){
     $(document).on('tap', '.btn', function(e){
         e.preventDefault();
 
+        var _button = this;
+
         $('.loading').show();
 
         setTimeout(function(){
@@ -25,6 +27,18 @@ $(document).ready(function(){
 
         $( "#conteudo" ).load( $(this).attr('rel') , function(){
             $('.loading').hide();
+
+            if ($(_button).attr('rel') == 'http://thinkandlove.com.br/m_/index.php/causas') {
+                $.each( $('.causas article') , function(i, el){
+                    var _this = this;
+
+                    setTimeout(function(){
+                       $(_this).animate({
+                        'opacity':1.0
+                       }, 600);
+                    },200 + ( i * 200 ));
+                });
+            };
         });
 
         return false;
