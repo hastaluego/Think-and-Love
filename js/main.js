@@ -2,10 +2,6 @@ var zoom = window.innerWidth/640;
 document.getElementById('resize-content').style.opacity = 1;
 document.getElementById('resize-content').style.zoom = zoom;
 
-function _link(data){
-   window.open(decodeURIComponent(data), '_system');
-}
-
 $(document).ready(function(){
 
     $( "#conteudo" ).load( "http://thinkandlove.com.br/m/" , function(){
