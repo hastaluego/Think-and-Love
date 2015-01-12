@@ -49,6 +49,14 @@ $(document).ready(function(){
                     $(_this).attr('src' , $(_this).attr('src').replace("/m/", '') );
                 });
             };
+
+            if ( $(_button).attr('rel').indexOf("causa") != -1 ) {
+                $.each( $('.box-img img') , function(){
+                    var _this = this;
+
+                    $(_this).attr('src' , $(_this).attr('src').replace("/m/", '') );
+                });
+            };
         });
 
         return false;
