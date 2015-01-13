@@ -69,7 +69,6 @@ $(document).ready(function(){
 
             $('.loading').hide();
             $('.box-iframe').css('height' , $(window).height() / zoom );
-            $( window ).resize();
         });
 
         return false;
