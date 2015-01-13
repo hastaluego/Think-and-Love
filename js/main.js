@@ -28,7 +28,6 @@ $(document).ready(function(){
         }, 100);
 
         $( "#conteudo" ).load( $(this).attr('rel') , function(){
-            $('.loading').hide();
 
             // PAGINA CAUSAS
             if ( $(_button).attr('rel').indexOf("causas") != -1 ) {
@@ -68,8 +67,9 @@ $(document).ready(function(){
                 });
             };
 
+            $('.loading').hide();
             $('.box-iframe').css('height' , $(window).height() / zoom );
-            $('#resize-content').css('height' , $(window).height() / zoom );
+            $( window ).resize();
         });
 
         return false;
