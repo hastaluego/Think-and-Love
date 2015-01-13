@@ -1181,6 +1181,8 @@ body {
 }
 .selectricOpen .selectricItems {
   display: block;
+  overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 .selectricDisabled {
