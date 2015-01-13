@@ -110,17 +110,14 @@ $(document).ready(function(){
         window.history.back();
     });
 
-    
-
-
     $(document).on('tap', '.btn-youtube', function(e){
         e.preventDefault();
         $('.box-iframe').fadeIn();
         var _this = $(this);
-        var ifr = document.getElementById('loader');
+        var ifr = $('#loader');
         var str = _this.attr('rel').split("v=");
         var str = str[1].split("&");
-        ifr.src = '//www.youtube.com/embed/'+str[0]+'?html5=True';
+        $(ifr).html('<object><param name="movie" value="http://www.youtube.com/v/'+str[0]+'"></param><embed src="http://www.youtube.com/v/'+str[0]+'" type="application/x-shockwave-flash"></embed></object>');
         return false; 
     });
 
