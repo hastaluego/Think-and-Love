@@ -69,6 +69,7 @@ $(document).ready(function(){
             };
 
             $('.box-iframe').css('height' , $(window).height() / zoom );
+            $('#resize-content').css('height' , $(window).height() / zoom );
         });
 
         return false;
