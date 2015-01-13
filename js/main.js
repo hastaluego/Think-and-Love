@@ -120,7 +120,7 @@ $(document).ready(function(){
         var ifr = document.getElementById('loader');
         var str = _this.attr('rel').split("v=");
         var str = str[1].split("&");
-        ifr.src = '//www.youtube.com/embed/'+str[0];
+        ifr.src = '//www.youtube.com/embed/'+str[0]+'?html5=1';
         return false; 
     });
 
