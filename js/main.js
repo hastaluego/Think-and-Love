@@ -44,21 +44,21 @@ $(document).ready(function(){
             };
 
             // PAGINA ONGS
-            // if ( $(_button).attr('rel').indexOf("ongs") != -1 || $(_button).attr('rel').indexOf("causas_categoria") != -1 ) {
-            //     $.each( $('.ong-list article img') , function(){
-            //         var _this = this;
+            if ( $(_button).attr('rel').indexOf("ongs") != -1 || $(_button).attr('rel').indexOf("causas_categoria") != -1 ) {
+                $.each( $('.ong-list article img') , function(){
+                    var _this = this;
 
-            //         $(_this).attr('src' , $(_this).attr('src').replace("/m/", '') );
-            //     });
+                    $(_this).attr('src' , $(_this).attr('src').replace("/m/", '') );
+                });
 
-            //     if ( $(_button).attr('rel').indexOf("ongs") != -1 ) {
-            //         if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1)){
-            //             jQuery('select').selectric({
-            //                 disableOnMobile: false
-            //             });
-            //         }
-            //     }
-            // };
+                if ( $(_button).attr('rel').indexOf("ongs") != -1 ) {
+                    if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1)){
+                        jQuery('select').selectric({
+                            disableOnMobile: false
+                        });
+                    }
+                }
+            };
 
             // PAGINA CAUSA
             if ( $(_button).attr('rel').indexOf("causa") != -1 ) {
