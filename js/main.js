@@ -51,10 +51,12 @@ $(document).ready(function(){
                     $(_this).attr('src' , $(_this).attr('src').replace("/m/", '') );
                 });
 
-                if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1)){
-                    jQuery('select').selectric({
-                        disableOnMobile: false
-                    });
+                if ( $(_button).attr('rel').indexOf("ongs") != -1 ) {
+                    if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1)){
+                        jQuery('select').selectric({
+                            disableOnMobile: false
+                        });
+                    }
                 }
             };
 
