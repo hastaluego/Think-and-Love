@@ -77,6 +77,7 @@ $(document).ready(function(){
 
             $('.loading').hide();
             $('.box-iframe').css('height' , $(window).height() / zoom );
+            $('.overlay').fadeIn().fadeOut();
         });
 
         return false;
