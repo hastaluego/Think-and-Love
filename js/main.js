@@ -16,9 +16,7 @@ $(document).ready(function(){
 
     $(document).on('tap', '.btn', function(e){
         e.preventDefault();
-
         var _button = this;
-
         $('.loading').show();
 
         setTimeout(function(){
@@ -84,11 +82,9 @@ $(document).ready(function(){
 
     $btnmenu.on(eventClick, function(e){
         setTimeout(function(){
-
             $overlay.fadeIn(200, function(){
                 $nav.animate({top: 0}, 250);
             });
-
         }, 100);
     });
 
@@ -110,7 +106,6 @@ $(document).ready(function(){
 
     $btnvoltar.on(eventClick, function(e){
         e.preventDefault();
-
         window.history.back();
     });
 

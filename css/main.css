@@ -27,6 +27,8 @@ body{
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 nav,
 ul,
