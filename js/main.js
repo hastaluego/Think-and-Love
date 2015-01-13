@@ -55,6 +55,16 @@ $(document).ready(function(){
                         });
                     }
                 }
+
+                jQuery('.filter-ongs').on('change', function(){
+                    var letra = jQuery(this).val();
+                    jQuery('.hidden-item').hide();
+                    jQuery('.display-'+letra).show();
+                });
+
+                if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
+                    document.write('<style>.ong-list .ong-image:before{left:-11px;}</style>');
+                }
             };
 
             // PAGINA CAUSA
