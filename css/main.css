@@ -1051,7 +1051,7 @@ body {
 .box-iframe{
     display: none;
     background: rgba(0,0,0, .8);
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     z-index: 99;
@@ -1066,12 +1066,21 @@ body {
   color: #fff;
   font-size: 7rem;
 }
-.box-iframe iframe{
+.box-iframe #loader{
     margin-top: -250px;
     top: 50%;
     margin-left: -45%;
     left: 50%;
     position: absolute;
+    width: 90%;
+}
+.box-iframe #loader object, .box-iframe #loader embed{
+    height: 500px;
+    width: 100%;
+}
+
+.item, .item h1, .item h2, .item h3, .item h4, .item h5, .item h6, .item p, .item-content, .item-content h1, .item-content h2, .item-content h3, .item-content h4, .item-content h5, .item-content h6, .item-content p{
+  white-space: normal;
 }
 /*======================================================================
   Selectric
