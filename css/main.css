@@ -1076,7 +1076,8 @@ body {
     position: absolute;
     width: 90%;
 }
-.box-iframe #loader object, .box-iframe #loader embed{
+
+.box-iframe iframe, .box-iframe #loader object, .box-iframe #loader embed{
     height: 500px;
     width: 100%;
 }
