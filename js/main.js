@@ -57,16 +57,9 @@ $(document).ready(function(){
 
             };
 
-            // PAGINA CAUSA
-            if ( $(_button).attr('rel').indexOf("causa") != -1 ) {
-                $.each( $('.box-img img') , function(){
-                    var _this = this;
-                    $(_this).attr('src' , $(_this).attr('src').replace("/m/", '') );
-                });
-            };
-
             $('.loading').hide();
             $('.box-iframe').css('height' , $(window).height() / zoom );
+            
             if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1)){
                 $('.overlay').fadeIn().fadeOut();
             }
