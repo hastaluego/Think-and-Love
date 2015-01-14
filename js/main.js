@@ -48,13 +48,6 @@ $(document).ready(function(){
                     $(_this).attr('src' , $(_this).attr('src').replace("/m/", '') );
                 });
 
-                // if ( $(_button).attr('rel').indexOf("ongs") != -1 ) {
-                //     if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1)){
-                //         jQuery('select').selectric({
-                //             disableOnMobile: false
-                //         });
-                //     }
-                // }
 
                 jQuery('.filter-ongs').on('change', function(){
                     var letra = jQuery(this).val();
@@ -77,7 +70,10 @@ $(document).ready(function(){
 
             $('.loading').hide();
             $('.box-iframe').css('height' , $(window).height() / zoom );
-            $('.overlay').fadeIn().fadeOut();
+            if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1)){
+                $('.overlay').fadeIn().fadeOut();
+            }
+            
         });
 
         return false;
