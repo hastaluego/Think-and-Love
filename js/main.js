@@ -54,16 +54,15 @@ $(document).ready(function(){
                     jQuery('.hidden-item').hide();
                     jQuery('.display-'+letra).show();
                 });
-
             };
 
             $('.loading').hide();
             $('.box-iframe').css('height' , $(window).height() / zoom );
-            
+
             if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1)){
                 $('.overlay').fadeIn().fadeOut();
             }
-            
+
         });
 
         return false;
@@ -113,7 +112,11 @@ $(document).ready(function(){
         var ifr = $('#loader');
         var str = _this.attr('rel').split("v=");
         var str = str[1].split("&");
-        $(ifr).html('<object><param name="movie" value="http://www.youtube.com/v/'+str[0]+'"></param><embed src="http://www.youtube.com/v/'+str[0]+'" type="application/x-shockwave-flash"></embed></object>');
+        if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
+            $(ifr).html('<iframe width="90%" height="500" src="//www.youtube.com/embed/'+str[0]+'" frameborder="0" id="loader" allowfullscreen></iframe>');
+        }else{
+            $(ifr).html('<object><param name="movie" value="http://www.youtube.com/v/'+str[0]+'"></param><embed src="http://www.youtube.com/v/'+str[0]+'" type="application/x-shockwave-flash"></embed></object>');
+        }
         return false; 
     });
 
