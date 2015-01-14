@@ -55,9 +55,6 @@ $(document).ready(function(){
                     jQuery('.display-'+letra).show();
                 });
 
-                if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
-                    document.write('<style>.ong-list .ong-image:before{left:-11px;}</style>');
-                }
             };
 
             // PAGINA CAUSA
