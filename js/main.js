@@ -56,6 +56,11 @@ $(document).ready(function(){
                 });
             };
 
+            // PAGINA CAUSA
+            if ( $(_button).attr('rel').indexOf("causa/") != -1 ) {
+                $('.box-img img.responsive-width-img').attr('src' , $('.box-img img.responsive-width-img').attr('src').replace("/m/", '') );
+            }
+
             $('.loading').hide();
             $('.box-iframe').css('height' , $(window).height() / zoom );
 
